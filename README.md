@@ -17,3 +17,13 @@
 
 #### Commit Example
 `[RAT-1] Create api package`
+
+#### Development Environment
+
+> JAVA : JDK 8 with Maven  
+> DB : MongoDB  
+> Framework : Java Spring  
+> API : https://developer.riotgames.com/api-methods/#summoner-v4  
+>         https://developer.riotgames.com/api-methods/#league-v4  
+
+
