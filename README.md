@@ -4,10 +4,10 @@
 ##### Riot Games의 Open API를 이용하여 유저의 닉네임을 입력하면 전적 및 정보를 가져오는 프로그램
 
 ### Class Diagram
-> https://docs.google.com/spreadsheets/d/1Bk9Aamqjo-a9uWLrWDnppM0lxcAVrO4RaPEzx4fmpJM/edit?usp=sharing
+> https://docs.google.com/presentation/d/1D9ZzBooFVkInEVvQsMO16QTQKIMJaagJ3v5sAmZb85Y/edit?usp=sharing
 
 ### Task Board
->https://docs.google.com/spreadsheets/d/1Bk9Aamqjo-a9uWLrWDnppM0lxcAVrO4RaPEzx4fmpJM/edit?usp=sharing
+> https://docs.google.com/spreadsheets/d/1Bk9Aamqjo-a9uWLrWDnppM0lxcAVrO4RaPEzx4fmpJM/edit?usp=sharing
 
 
 ### Commit Rule
