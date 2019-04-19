@@ -1,4 +1,4 @@
-package controller;
+package org.cnu.realcoding.riotgamesapi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
