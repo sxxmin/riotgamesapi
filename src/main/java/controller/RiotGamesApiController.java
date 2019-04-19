@@ -12,6 +12,6 @@ public class RiotGamesApiController {
 
     @GetMapping("/summoner")
     public LeaguePositionDTO getLeaguePositionDTO(@RequestParam String summonerName){
-        return LeaguePositionService.getLeaguePosition(summonerName);
+        return leaguePositionService.getLeaguePosition(summonerName);
     }
 }
