@@ -46,5 +46,3 @@ public class LeaguePositionService {
         currentSummonerServiceScoreRepo.updateCurrentSummonerScore(target, updatedLeaguePositionDTO);
     }
 }
-
-//summonerService.getEncryptedSummonerId(summonerName)
