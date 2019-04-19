@@ -2,10 +2,10 @@ package org.cnu.realcoding.riotgamesapi.service;
 
 import org.cnu.realcoding.riotgamesapi.domain.LeaguePositionDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
-import java.util.List;
 
 @Service
 public class LeaguePositionService {
@@ -16,7 +16,7 @@ public class LeaguePositionService {
     @Autowired
     private CurrentSummonerServiceScoreRepo currentSummonerServiceScoreRepo;
 
-    private List<String> encryptedSummonerIdQueue = new LinkedList<>();
+    private LinkedList<String> encryptedSummonerIdQueue = new LinkedList<>();
 
     public LeaguePositionDTO getLeaguePosition(String summonerName){
         if(){ //todo Is there summonerName in database?
@@ -33,7 +33,18 @@ public class LeaguePositionService {
         this.encryptedSummonerIdQueue = currentSummonerServiceScoreRepo.findAllEncryptedSummonerId();
     }
 
-    
+    @Scheduled(initialDelay = 5000L, fixedDelay = 2000L)
+    public void updateLeaguePositionPeriodically(){
+        if(encryptedSummonerIdQueue.isEmpty()){
+            this.setEncryptedSummonerIdQueue();
+        }
+
+        String target = encryptedSummonerIdQueue.pop();
+        encryptedSummonerIdQueue.add(target);
+
+        LeaguePositionDTO updatedLeaguePositionDTO = riotGamesApiClient.getLeaguePositionDTO(target);
+        currentSummonerServiceScoreRepo.updateCurrentSummonerScore(updatedLeaguePositionDTO);
+    }
 }
 
 //summonerService.getEncryptedSummonerId(summonerName)
