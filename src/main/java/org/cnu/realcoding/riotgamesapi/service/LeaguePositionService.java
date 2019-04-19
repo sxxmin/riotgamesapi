@@ -24,9 +24,16 @@ public class LeaguePositionService {
         } else {
             String encryptedSummonerId = summonerService.getEncryptedSummonerId(summonerName);
             LeaguePositionDTO currentLeaguePositionDTO = riotGamesApiClient.getLeaguePositionDTO(encryptedSummonerId);
+            currentSummonerServiceScoreRepo.insertCurrentSummonerScore(LeaguePositionDTO);
             return currentLeaguePositionDTO;
         }
     }
+
+    public void setEncryptedSummonerIdQueue(){
+        this.encryptedSummonerIdQueue = currentSummonerServiceScoreRepo.findAllEncryptedSummonerId();
+    }
+
+    
 }
 
 //summonerService.getEncryptedSummonerId(summonerName)
