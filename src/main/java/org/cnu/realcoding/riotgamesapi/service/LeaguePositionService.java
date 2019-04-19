@@ -43,7 +43,7 @@ public class LeaguePositionService {
         encryptedSummonerIdQueue.add(target);
 
         LeaguePositionDTO updatedLeaguePositionDTO = riotGamesApiClient.getLeaguePositionDTO(target);
-        currentSummonerServiceScoreRepo.updateCurrentSummonerScore(updatedLeaguePositionDTO);
+        currentSummonerServiceScoreRepo.updateCurrentSummonerScore(target, updatedLeaguePositionDTO);
     }
 }
 
