@@ -10,7 +10,7 @@ public class LeaguePositionDTO {
     private List<LeaguePosition> array = new ArrayList<>();
 
     @Data
-    private class LeaguePosition{
+    public class LeaguePosition{
         private String tier;
         private String summonerName;
         private boolean hotStreak;
