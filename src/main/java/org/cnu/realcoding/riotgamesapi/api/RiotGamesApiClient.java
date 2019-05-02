@@ -23,4 +23,5 @@ public class RiotGamesApiClient {
     public LeaguePositionDTO getCurrentLeaguePositionDTO(String encryptedSummonerId) {
         return restTemplate.exchange(requestLeaguePositionDTO, HttpMethod.GET, null, LeaguePositionDTO.class, encryptedSummonerId).getBody();
     }
+
 }
