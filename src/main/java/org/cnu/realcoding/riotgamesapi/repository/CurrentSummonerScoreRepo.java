@@ -12,7 +12,7 @@ public class CurrentSummonerScoreRepo {
     MongoTemplate mongoTemplate;
 
     //Do insert SummonerScore to MongoDB
-    void insertCurrentSummonerScore(LeaguePositionDTO leaguePositionDTO) {
+    public void insertCurrentSummonerScore(LeaguePositionDTO leaguePositionDTO) {
         mongoTemplate.insert(leaguePositionDTO);
     }
 }
