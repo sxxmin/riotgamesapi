@@ -9,6 +9,7 @@ import java.util.List;
 public class LeaguePositionDTO {
     private List<LeaguePosition> array = new ArrayList<>();
 
+    @Data
     private class LeaguePosition{
         private String tier;
         private String summonerName;
